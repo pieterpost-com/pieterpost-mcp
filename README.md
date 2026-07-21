@@ -1,12 +1,14 @@
 # PieterPost MCP
 
-PieterPost MCP lets AI agents prepare, price, review, pay for, and send real letters and postcards through PieterPost.
+[PieterPost MCP](https://pieterpost.com/mcp/) is a hosted Model Context Protocol (MCP) server for preparing, pricing, reviewing, paying for, and sending real physical letters and postcards from ChatGPT, Claude, and other compatible AI assistants.
+
+This public repository contains the integration documentation and registry metadata for the hosted PieterPost MCP server.
 
 ## Server
 
-- MCP server URL: `https://pieterpost.com/mcp/`
-- Human docs: `https://pieterpost.com/api/docs/mcp`
-- Markdown docs: `https://pieterpost.com/api/docs/mcp.md`
+- MCP server URL: [pieterpost.com/mcp/](https://pieterpost.com/mcp/)
+- Human docs: [PieterPost MCP documentation](https://pieterpost.com/api/docs/mcp)
+- Markdown docs: [PieterPost MCP documentation in Markdown](https://pieterpost.com/api/docs/mcp.md)
 - OAuth issuer: `https://pieterpost.com/mcp/oauth`
 
 ## What It Does
