@@ -1,17 +1,17 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.neddes/pieterpost-mcp",
+  "name": "io.github.pieterpost-com/pieterpost-mcp",
   "title": "PieterPost MCP",
   "description": "Let AI agents prepare, review, pay for, and send real letters and postcards.",
   "repository": {
-    "url": "https://github.com/neddes/pieterpost-mcp",
+    "url": "https://github.com/pieterpost-com/pieterpost-mcp",
     "source": "github"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://pieterpost.com/mcp/"
+      "url": "https://pieterpost.com/mcp/setup/"
     }
   ]
 }

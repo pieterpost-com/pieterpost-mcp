@@ -3,7 +3,7 @@
 PieterPost MCP is a remote MCP server available at:
 
 ```text
-https://pieterpost.com/mcp/
+https://pieterpost.com/mcp/setup/
 ```
 
 Use that URL when adding PieterPost as a custom MCP connector in a compatible client.
@@ -25,7 +25,7 @@ Use the remote server URL:
 {
   "type": "mcp",
   "name": "PieterPost",
-  "server_url": "https://pieterpost.com/mcp/"
+  "server_url": "https://pieterpost.com/mcp/setup/"
 }
 ```
 
@@ -33,4 +33,4 @@ Use the remote server URL:
 
 - Human docs: `https://pieterpost.com/api/docs/mcp`
 - Markdown docs: `https://pieterpost.com/api/docs/mcp.md`
-- MCP server URL: `https://pieterpost.com/mcp/`
+- MCP server URL: `https://pieterpost.com/mcp/setup/`

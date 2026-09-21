@@ -6,7 +6,7 @@ This public repository contains the integration documentation and registry metad
 
 ## Server
 
-- MCP server URL: [pieterpost.com/mcp/](https://pieterpost.com/mcp/)
+- MCP server URL: [pieterpost.com/mcp/setup/](https://pieterpost.com/mcp/setup/)
 - Human docs: [PieterPost MCP documentation](https://pieterpost.com/api/docs/mcp)
 - Markdown docs: [PieterPost MCP documentation in Markdown](https://pieterpost.com/api/docs/mcp.md)
 - OAuth issuer: `https://pieterpost.com/mcp/oauth`
@@ -22,7 +22,7 @@ For normal use, agents should create a PieterPost review or payment link. Pieter
 Use this server URL in MCP clients that support remote Streamable HTTP servers:
 
 ```text
-https://pieterpost.com/mcp/
+https://pieterpost.com/mcp/setup/
 ```
 
 Example MCP client snippet:
@@ -31,7 +31,7 @@ Example MCP client snippet:
 {
   "type": "mcp",
   "name": "PieterPost",
-  "server_url": "https://pieterpost.com/mcp/"
+  "server_url": "https://pieterpost.com/mcp/setup/"
 }
 ```
 
