@@ -13,7 +13,7 @@ This public repository contains the integration documentation and registry metad
 
 ## What It Does
 
-PieterPost gives MCP clients a safe postal outbox. Agents can design printed greeting cards with PNG previews, draft letters and postcards, quote prices, create review links, create hosted payment links, upload assets, use Mailbook contacts, and check order status.
+PieterPost gives MCP clients a safe postal outbox. Agents can design printed greeting cards with PNG previews, draft letters and postcards, quote prices, create review links, create hosted payment links, upload assets, use Address Book contacts, and check order status.
 
 For normal use, agents should create a PieterPost review or payment link. PieterPost sends the mail only after the user reviews and pays.
 

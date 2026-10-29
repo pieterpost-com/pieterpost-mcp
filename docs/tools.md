@@ -1,6 +1,6 @@
 # Tools
 
-PieterPost MCP exposes tools for printed greeting card design, postal workflows, account context, payment links, and Mailbook contacts.
+PieterPost MCP exposes tools for printed greeting card design, postal workflows, account context, payment links, and Address Book contacts.
 
 ## Documentation Tools
 
@@ -9,6 +9,8 @@ PieterPost MCP exposes tools for printed greeting card design, postal workflows,
 
 ## Mail Tools
 
+- `prepare_letter`: Validate, price, and save an unpaid letter (plain text, PDFs, or images), with standard or registered delivery, including US Certified Mail.
+- `prepare_postcard`: Validate, price, and save an unpaid postcard, optionally with a square custom front.
 - `quote_order`: Price a letter or postcard before sending.
 - `create_compose_link`: Create a PieterPost review link with prepared recipient and message data.
 - `create_payment_link`: Create a hosted payment link for a prepared letter or postcard.
@@ -27,13 +29,13 @@ These four tools work on both the guest and OAuth servers. For a supplied card p
 
 Check `characterIssues`, `printIssues`, and `design.card.techniqueIssues`. Explain characters printed in the fallback font, and fix blocking issues before ordering. Share the PNG previews and private `editorUrl` only with the user. The user refines and orders the card in the editor. No print PDF is returned, and creating a draft does not order, pay, print, or send a card.
 
-## Mailbook Tools
+## Address Book Tools
 
-- `list_mailbook_contacts`: Search saved contacts.
-- `get_mailbook_contact`: Fetch one saved contact.
-- `create_mailbook_contact`: Create a contact when authorized.
-- `update_mailbook_contact`: Update a contact when authorized.
-- `delete_mailbook_contact`: Delete a contact when authorized.
+- `list_address_book_contacts`: Search saved contacts.
+- `get_address_book_contact`: Fetch one saved contact.
+- `create_address_book_contact`: Create a contact when authorized.
+- `update_address_book_contact`: Update a contact when authorized.
+- `delete_address_book_contact`: Delete a contact when authorized.
 
 ## Developer Tools
 
