@@ -1,6 +1,6 @@
 # Tools
 
-PieterPost MCP exposes tools for postal workflows, account context, payment links, and Mailbook contacts.
+PieterPost MCP exposes tools for printed greeting card design, postal workflows, account context, payment links, and Mailbook contacts.
 
 ## Documentation Tools
 
@@ -15,6 +15,17 @@ PieterPost MCP exposes tools for postal workflows, account context, payment link
 - `create_checkout_link`: Compatibility checkout link tool.
 - `get_order`: Check order status.
 - `upload_asset`: Upload supported assets, such as postcard front images, letter attachments, or letter stamp images.
+
+## Printed Greeting Card Tools
+
+- `list_card_options`: List starter designs, formats, paper, techniques, fonts, and illustrations.
+- `create_card_design`: Create a private card draft from a starter or blank design, with PNG previews.
+- `get_card_design`: Read the current design and version, including editor changes.
+- `update_card_design`: Apply edits with the latest `baseVersion`; a version conflict returns the current design.
+
+These four tools work on both the guest and OAuth servers. For a supplied card photo, use `upload_asset` with `kind=postcard-image`; card photos can have any aspect ratio. Use the returned `assetId` in `add_image`.
+
+Check `characterIssues`, `printIssues`, and `design.card.techniqueIssues`. Explain characters printed in the fallback font, and fix blocking issues before ordering. Share the PNG previews and private `editorUrl` only with the user. The user refines and orders the card in the editor. No print PDF is returned, and creating a draft does not order, pay, print, or send a card.
 
 ## Mailbook Tools
 
