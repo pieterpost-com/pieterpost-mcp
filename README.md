@@ -1,6 +1,6 @@
 # PieterPost MCP
 
-[PieterPost MCP](https://pieterpost.com/mcp/) is a hosted Model Context Protocol (MCP) server for preparing, pricing, reviewing, paying for, and sending real physical letters, postcards, and printed greeting cards from ChatGPT, Claude, and other compatible AI assistants.
+[PieterPost MCP](https://pieterpost.com/mcp/) is a hosted Model Context Protocol (MCP) server for preparing, pricing, reviewing, paying for, and sending real physical letters, postcards, designed letters, and printed greeting cards from ChatGPT, Claude, and other compatible AI assistants.
 
 This public repository contains the integration documentation and registry metadata for the hosted PieterPost MCP server.
 
@@ -13,13 +13,15 @@ This public repository contains the integration documentation and registry metad
 
 ## What It Does
 
-PieterPost gives MCP clients a safe postal outbox. Agents can design printed greeting cards with PNG previews, draft letters and postcards, quote prices, create review links, create hosted payment links, upload assets, use Address Book contacts, and check order status.
+PieterPost gives MCP clients a safe postal outbox. Agents can design letters and printed greeting cards with PNG previews, draft letters and postcards, quote prices, create review links, create hosted payment links, upload assets, use Address Book contacts, and check order status.
 
 For normal use, agents should create a PieterPost review or payment link. PieterPost sends the mail only after the user reviews and pays.
 
 For greeting cards, use `list_card_options`, `create_card_design`, `get_card_design`, and `update_card_design`. Upload a supplied photo with `upload_asset`, then use its asset ID in the design. The private editor link lets the user refine and order the card. Card drafts do not create a paid order. Explain fallback-font and print warnings before ordering.
 
-The guest server at `https://pieterpost.com/mcp/public/` needs no account or authentication. It includes the four card tools and nine public mail tools. Account tools and saved contacts use the OAuth server above.
+For designed letters (fonts, colours, photos, illustrations, extra pages, personal fields like `{{first_name}}`), use `list_letter_options`, `create_letter_design`, `get_letter_design`, and `update_letter_design`. Pick the postal layout for the recipient's country. Results list print issues per page, including clashes with other countries' address windows; these block ordering. The private editor link lets the user add recipients and order the letter.
+
+The guest server at `https://pieterpost.com/mcp/public/` needs no account or authentication. It includes the four card tools, the four letter design tools, and nine public mail tools. Account tools and saved contacts use the OAuth server above.
 
 ## Client Configuration
 
