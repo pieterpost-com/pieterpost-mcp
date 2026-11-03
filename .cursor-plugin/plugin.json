@@ -1,0 +1,14 @@
+{
+  "name": "pieterpost",
+  "displayName": "PieterPost",
+  "version": "1.2.0",
+  "description": "Design letters and printed greeting cards, quote postage, and create secure checkout links for physical mail.",
+  "author": {
+    "name": "Post B.V.",
+    "email": "pieter@pieterpost.com"
+  },
+  "homepage": "https://pieterpost.com/en/",
+  "repository": "https://github.com/pieterpost-com/pieterpost-mcp",
+  "logo": "assets/logo.png",
+  "keywords": ["mail", "letters", "postcards", "greeting-cards", "printing", "postage", "mcp"]
+}

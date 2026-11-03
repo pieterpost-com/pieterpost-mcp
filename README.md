@@ -41,7 +41,15 @@ Example MCP client snippet:
 }
 ```
 
-## Docs
+## Cursor and Grok Bot plugin
+
+This repository also contains a Cursor plugin manifest at `.cursor-plugin/plugin.json`.
+The plugin connects to the public Streamable HTTP server at `https://pieterpost.com/mcp/public/`.
+It provides 17 tools and needs no account, API key, or sign-in. Users review and pay on PieterPost before printing and posting.
+
+For review, connect to the public server and test the tools with synthetic data. Use `mode=test` for mail operations and a fresh UUID idempotency key for each new operation. Check the result before retrying an operation. Do not pay or submit a live order during testing.
+
+## Documentation
 
 - [Setup](docs/setup.md)
 - [OAuth and permissions](docs/oauth.md)
