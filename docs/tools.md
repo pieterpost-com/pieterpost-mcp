@@ -23,9 +23,10 @@ PieterPost MCP exposes tools for letter and printed greeting card design, postal
 - `list_card_options`: List starter designs, formats, paper, techniques, fonts, and illustrations.
 - `create_card_design`: Create a private card draft from a starter or blank design, with PNG previews.
 - `get_card_design`: Read the current design and version, including editor changes.
+- `get_card_preview`: Read one rendered card side (`draftToken`, `pageIndex` 0 or 1). Returns text and PNG image content without structured data so ChatGPT can inspect the pixels. Call for both sides after each create or update. Use `previewPages: []` on writes to avoid duplicate rendering.
 - `update_card_design`: Apply edits with the latest `baseVersion`; a version conflict returns the current design.
 
-These four tools work on both the guest and OAuth servers. For a supplied card photo, use `upload_asset` with `kind=postcard-image`; card photos can have any aspect ratio. Use the returned `assetId` in `add_image`.
+These five tools work on both the guest and OAuth servers. For a supplied card photo, use `upload_asset` with `kind=postcard-image`; card photos can have any aspect ratio. Use the returned `assetId` in `add_image`.
 
 Check `characterIssues`, `printIssues`, and `design.card.techniqueIssues`. Explain characters printed in the fallback font, and fix blocking issues before ordering. Share the PNG previews and private `editorUrl` only with the user. The user refines and orders the card in the editor. No print PDF is returned, and creating a draft does not order, pay, print, or send a card.
 

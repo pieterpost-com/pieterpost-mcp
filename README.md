@@ -17,11 +17,11 @@ PieterPost gives MCP clients a safe postal outbox. Agents can design letters and
 
 For normal use, agents should create a PieterPost review or payment link. PieterPost sends the mail only after the user reviews and pays.
 
-For greeting cards, use `list_card_options`, `create_card_design`, `get_card_design`, and `update_card_design`. Upload a supplied photo with `upload_asset`, then use its asset ID in the design. The private editor link lets the user refine and order the card. Card drafts do not create a paid order. Explain fallback-font and print warnings before ordering.
+For greeting cards, use `list_card_options`, `create_card_design`, `get_card_design`, `get_card_preview`, and `update_card_design`. Upload a supplied photo with `upload_asset`, then use its asset ID in the design. After each create or update, call `get_card_preview` for page 0, then page 1, to inspect the actual card images. The private editor link lets the user refine and order the card. Card drafts do not create a paid order. Explain fallback-font and print warnings before ordering.
 
 For designed letters (fonts, colours, photos, illustrations, extra pages, personal fields like `{{first_name}}`), use `list_letter_options`, `create_letter_design`, `get_letter_design`, and `update_letter_design`. Pick the postal layout for the recipient's country. Results list print issues per page, including clashes with other countries' address windows; these block ordering. The private editor link lets the user add recipients and order the letter.
 
-The guest server at `https://pieterpost.com/mcp/public/` needs no account or authentication. It includes the four card tools, the four letter design tools, and nine public mail tools. Account tools and saved contacts use the OAuth server above.
+The guest server at `https://pieterpost.com/mcp/public/` needs no account or authentication. It includes the five card tools, the four letter design tools, and nine public mail tools. Account tools and saved contacts use the OAuth server above.
 
 ## Client Configuration
 
@@ -45,7 +45,7 @@ Example MCP client snippet:
 
 This repository also contains a Cursor plugin manifest at `.cursor-plugin/plugin.json`.
 The plugin connects to the public Streamable HTTP server at `https://pieterpost.com/mcp/public/`.
-It provides 17 tools and needs no account, API key, or sign-in. Users review and pay on PieterPost before printing and posting.
+It provides 18 tools and needs no account, API key, or sign-in. Users review and pay on PieterPost before printing and posting.
 
 For review, connect to the public server and test the tools with synthetic data. Use `mode=test` for mail operations and a fresh UUID idempotency key for each new operation. Check the result before retrying an operation. Do not pay or submit a live order during testing.
 
